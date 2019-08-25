@@ -1,8 +1,13 @@
 // commanderモジュールをprogramとしてインポートする
 const program = require("commander");
-// コマンドライン引数をcommanderでパースする
-program.parse(process.argv);
+// fsモジュールをfsオブジェクトとしてインポートする
+const fs = require("fs");
 
-// ファイルパスをprogram.args配列から取り出す
+// コマンドライン引数からファイルパスを取得する
+program.parse(process.argv);
 const filePath = program.args[0];
-console.log(filePath);
+
+// ファイルを非同期で読み込む
+fs.readFile(filePath, (err, file) => {
+  console.log(file);
+});
