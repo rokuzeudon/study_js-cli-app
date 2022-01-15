@@ -5,7 +5,7 @@
   "main": "main.js",
   "dependencies": {
     "commander": "^2.9.0",
-    "marked": "^0.7.0"
+    "marked": "^4.0.10"
   },
   "devDependencies": {},
   "scripts": {
